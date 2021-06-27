@@ -1,4 +1,5 @@
 import sys
+import time
 from flask import Flask, request
 from cloudevent import CloudEventService
 
@@ -24,7 +25,10 @@ def home():
     print(
         f"Found {event['id']} from {event['source']} with type "
         f"{event['type']} and specversion {event['specversion']}"
-    )    
+    )
+
+    # Aggregate model
+    time.sleep(5) # Sleep for 5s
 
     cloud_event.send_message(broker_address, source, message_type, data)
 
