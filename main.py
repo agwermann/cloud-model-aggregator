@@ -8,7 +8,7 @@ if(len(sys.argv) < 2):
 
 broker_address = sys.argv[1]
 source = "cloud-aggregator"
-message_type = "cloud-model"
+message_type = "cloud-to-edge-model"
 data = { "fed_model": "cloud-aggregated-model-file" }
 
 #broker_address = "broker-ingress.knative-eventing.svc.cluster.local/fedlearning/default"
