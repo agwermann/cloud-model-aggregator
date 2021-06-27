@@ -1,0 +1,8 @@
+version: '3.5'
+
+services:
+  fed-cloud-model-aggregator:
+    image: fed-cloud-model-aggregator:0.1
+    container_name: fed-cloud-model-aggregator
+    ports:
+      - 8080:8080
